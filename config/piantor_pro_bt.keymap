@@ -98,7 +98,7 @@
 
         COMMAND {
             bindings = <
-&kp LG(TAB)  &kp LG(Q)  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)  &trans  &trans  &trans  &trans  &trans  &kp LG(BACKSPACE)  &kp LG(GRAVE)  &kp LG(A)  &kp LG(S)  &trans  &kp LG(F)  &trans  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &kp LG(ENTER)  &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans  &trans  &trans  &trans  &trans  &trans  &kp LS(LG(K))  &trans  &trans  &trans  &trans  &kp LG(SPACE)  &trans
+&kp LG(TAB)  &kp LG(Q)  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)  &trans  &trans  &trans  &trans  &trans  &kp LG(BACKSPACE)  &kp LG(GRAVE)  &kp LG(A)  &kp LG(S)  &kp LG(L)  &kp LG(F)  &trans  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &kp LG(ENTER)  &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(N)  &trans  &trans  &trans  &trans  &trans  &kp LS(LG(K))  &trans  &trans  &trans  &trans  &kp LG(SPACE)  &trans
             >;
         };
 
