@@ -21,3 +21,7 @@
 include:
   - board: piantor_pro_bt_left
   - board: piantor_pro_bt_right
+  - board: piantor_pro_bt_left
+    shield: settings_reset
+  - board: piantor_pro_bt_right
+    shield: settings_reset
