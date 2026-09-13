@@ -1,4 +1,5 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1000
+
 #include <dt-bindings/zmk/behaviors.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -27,6 +28,34 @@
             #binding-cells = <0>;
             bindings = <&none &kp C &kp O &kp N &kp S &kp O &kp L &kp E &kp DOT &kp L &kp O &kp G &kp LPAR &kp RPAR &kp SEMI &kp LEFT_ARROW &kp LEFT_ARROW>;
             label = "LOG_JS";
+        };
+
+        log_php: log_php {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp W &kp F &kp LS(C) &kp O &kp N &kp S &kp O &kp L &kp E &kp LS(L) &kp O &kp G &kp LPAR &kp RPAR &kp SEMI &kp LEFT_ARROW &kp LEFT_ARROW>;
+            label = "LOG_PHP";
+        };
+
+        git_commit: git_commit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp M &kp SPACE &kp DQT &kp DQT &kp LEFT_ARROW>;
+            label = "GIT_COMMIT";
+        };
+
+        git_amend: git_amend {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp MINUS &kp A &kp M &kp E &kp N &kp D>;
+            label = "GIT_AMEND";
+        };
+
+        git_reset: git_reset {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp G &kp I &kp T &kp SPACE &kp R &kp E &kp S &kp E &kp T &kp SPACE &kp MINUS &kp MINUS &kp H &kp A &kp R &kp D &kp SPACE &kp O &kp R &kp I &kp G &kp I &kp N &kp FSLH &kp M &kp A &kp S &kp T &kp E &kp R>;
+            label = "GIT_RESET";
         };
     };
 
@@ -75,7 +104,7 @@
 
         SYMBOL {
             bindings = <
-&trans  &kp LS(GRAVE)  &kp LBKT  &kp RBKT  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(LBKT)  &kp LS(RBKT)  &kp LS(SQT)  &trans  &trans  &kp LS(N8)  &kp KP_MINUS  &kp LS(EQUAL)  &kp KP_EQUAL  &kp GRAVE  &kp LS(N2)  &kp LS(SEMI)  &kp LS(N9)  &kp LS(N0)  &kp LS(N1)  &trans  &trans  &kp LS(BSLH)  &kp BSLH  &kp LS(N3)  &kp LS(MINUS)  &back_directory  &kp LG(LS(K))  &kp SEMI  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(FSLH)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LS(GRAVE)  &kp LBKT  &kp RBKT  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(LBKT)  &kp LS(RBKT)  &kp LS(SQT)  &trans  &trans  &kp LS(N8)  &kp KP_MINUS  &kp LS(EQUAL)  &kp KP_EQUAL  &kp GRAVE  &kp LS(N2)  &kp LS(SEMI)  &kp LS(N9)  &kp LS(N0)  &kp LS(N1)  &back_directory  &trans  &kp LS(BSLH)  &kp BSLH  &kp LS(N3)  &kp LS(MINUS)  &log_php  &log_js  &kp SEMI  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(FSLH)  &trans  &git_reset  &git_commit  &git_amend  &trans  &trans  &trans
             >;
         };
 
