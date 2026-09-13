@@ -19,7 +19,7 @@
 
         QWERTY {
             bindings = <
-&kp TAB  &lt 4 Q  &lt 4 W  &lt 4 E  &mt NUMBER_4 R  &lt 4 T  &lt 4 Y  &lt 4 U  &lt 4 I  &lt 4 O  &lt 4 P  &kp BSPC  &kp LEFT_CONTROL  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp RET  &mo 5  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mo 6  &kp LALT  &kp LSHFT  &kp LGUI  &mo 2  &kp SPACE  &mo 3
+&kp TAB  &mt NUMBER_1 Q  &mt NUMBER_2 W  &mt NUMBER_3 E  &mt NUMBER_4 R  &mt NUMBER_5 T  &mt NUMBER_6 Y  &mt NUMBER_7 U  &mt NUMBER_8 I  &mt NUMBER_9 O  &mt NUMBER_0 P  &kp BSPC  &kp LEFT_CONTROL  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp RET  &mo 4  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mo 5  &kp LALT  &kp LSHFT  &kp LGUI  &mo 2  &kp SPACE  &mo 3
             >;
         };
 
@@ -38,12 +38,6 @@
         SYMBOL {
             bindings = <
 &trans  &kp LS(GRAVE)  &kp LBKT  &kp RBKT  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(LBKT)  &kp LS(RBKT)  &kp LS(SQT)  &trans  &trans  &kp LS(N8)  &kp KP_MINUS  &kp LS(EQUAL)  &kp KP_EQUAL  &kp GRAVE  &kp LS(N2)  &kp LS(SEMI)  &kp LS(N9)  &kp LS(N0)  &kp LS(N1)  &trans  &trans  &kp LS(BSLH)  &kp BSLH  &kp LS(N3)  &kp LS(MINUS)  &backdirectory  &kp LG(LS(K))  &kp SEMI  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(FSLH)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        NUM {
-            bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
