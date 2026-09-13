@@ -10,13 +10,22 @@
     flavor = "tap-preferred";
 };
 
+&mmv { time-to-max-speed-ms = <150>; };
+
 / {
     macros {
-        backdirectory: backdirectory {
+        back_directory: backdirectory {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp DOT &kp DOT &kp FSLH>;
             label = "BACKDIRECTORY";
+        };
+
+        log_js: log_js {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp C &kp O &kp N &kp S &kp O &kp L &kp E &kp DOT &kp L &kp O &kp G &kp LPAR &kp RPAR &kp SEMI &kp LEFT_ARROW &kp LEFT_ARROW>;
+            label = "LOG_JS";
         };
     };
 
@@ -25,6 +34,15 @@
             flavor = "tap-preferred";
             tapping-term-ms = <400>;
         };
+
+        layer_sticky: layer_sticky {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_STICKY";
+            bindings = <&mo>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -32,7 +50,7 @@
 
         QWERTY {
             bindings = <
-&kp TAB  &mt NUMBER_1 Q  &mt NUMBER_2 W  &mt NUMBER_3 E  &mt NUMBER_4 R  &mt NUMBER_5 T  &mt NUMBER_6 Y  &mt NUMBER_7 U  &mt NUMBER_8 I  &mt NUMBER_9 O  &mt NUMBER_0 P  &kp BSPC  &kp LEFT_CONTROL  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp RET  &mo 4  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mo 5  &kp LALT  &kp LSHFT  &kp LGUI  &mo 2  &kp SPACE  &mo 3
+&kp TAB  &mt NUMBER_1 Q  &mt NUMBER_2 W  &mt NUMBER_3 E  &mt NUMBER_4 R  &mt NUMBER_5 T  &mt NUMBER_6 Y  &mt NUMBER_7 U  &mt NUMBER_8 I  &mt NUMBER_9 O  &mt NUMBER_0 P  &kp BSPC  &kp LEFT_CONTROL  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp RET  &mo 5  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &tog 6  &kp LALT  &kp LSHFT  &layer_sticky 3 LEFT_COMMAND  &mo 2  &kp SPACE  &mo 4
             >;
         };
 
@@ -44,32 +62,47 @@
 
         UTILITY {
             bindings = <
-&trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans  &kp ESC  &kp DEL  &trans  &trans  &trans  &trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans  &trans  &trans  &kp NUMBER_1  &kp N2  &kp NUMBER_3  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans  &kp NUMBER_0  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
+&trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans  &kp ESC  &kp DEL  &trans  &trans  &trans  &trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans  &trans  &trans  &kp NUMBER_1  &kp N2  &kp NUMBER_3  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans  &trans  &kp NUMBER_0  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        COMMAND {
+            bindings = <
+&kp LG(TAB)  &kp LG(Q)  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)  &trans  &trans  &trans  &trans  &trans  &kp LG(BACKSPACE)  &kp LG(GRAVE)  &kp LG(A)  &kp LG(S)  &trans  &kp LG(F)  &trans  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &kp LG(ENTER)  &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans  &trans  &trans  &trans  &trans  &trans  &kp LS(LG(K))  &trans  &trans  &trans  &trans  &kp LG(SPACE)  &trans
             >;
         };
 
         SYMBOL {
             bindings = <
-&trans  &kp LS(GRAVE)  &kp LBKT  &kp RBKT  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(LBKT)  &kp LS(RBKT)  &kp LS(SQT)  &trans  &trans  &kp LS(N8)  &kp KP_MINUS  &kp LS(EQUAL)  &kp KP_EQUAL  &kp GRAVE  &kp LS(N2)  &kp LS(SEMI)  &kp LS(N9)  &kp LS(N0)  &kp LS(N1)  &trans  &trans  &kp LS(BSLH)  &kp BSLH  &kp LS(N3)  &kp LS(MINUS)  &backdirectory  &kp LG(LS(K))  &kp SEMI  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(FSLH)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LS(GRAVE)  &kp LBKT  &kp RBKT  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(LBKT)  &kp LS(RBKT)  &kp LS(SQT)  &trans  &trans  &kp LS(N8)  &kp KP_MINUS  &kp LS(EQUAL)  &kp KP_EQUAL  &kp GRAVE  &kp LS(N2)  &kp LS(SEMI)  &kp LS(N9)  &kp LS(N0)  &kp LS(N1)  &trans  &trans  &kp LS(BSLH)  &kp BSLH  &kp LS(N3)  &kp LS(MINUS)  &back_directory  &kp LG(LS(K))  &kp SEMI  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(FSLH)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         FUNC {
             bindings = <
-&bootloader  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans  &sys_reset  &trans  &trans  &trans  &trans  &trans  &kp LG(LS(Z))  &kp LG(Z)  &kp LG(C)  &kp LG(X)  &kp LG(V)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&bootloader  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans  &sys_reset  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        MOUSE {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bootloader  &trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &sys_reset  &trans  &trans  &trans  &trans  &trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &tog 6  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK
             >;
         };
 
         SYSTEM {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bootloader  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &rgb_ug RGB_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &trans  &sys_reset  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_SPD  &tog 1  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &rgb_ug RGB_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_SPD  &tog 1  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
+    };
 
-        layer_7 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        SYSTEM {
+            if-layers = <6 5>;
+            then-layer = <7>;
         };
     };
 };
