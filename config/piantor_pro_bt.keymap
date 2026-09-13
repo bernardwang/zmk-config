@@ -66,13 +66,14 @@
             tapping-term-ms = <400>;
         };
 
-        layer_sticky: layer_sticky {
+        cmd_layer: cmd_layer {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_STICKY";
-            bindings = <&mo>, <&sk>;
+            label = "CMD_LAYER";
+            bindings = <&kp>, <&sl>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -81,25 +82,25 @@
 
         QWERTY {
             bindings = <
-&kp TAB  &mt NUMBER_1 Q  &mt NUMBER_2 W  &mt NUMBER_3 E  &mt NUMBER_4 R  &mt NUMBER_5 T  &mt NUMBER_6 Y  &mt NUMBER_7 U  &mt NUMBER_8 I  &mt NUMBER_9 O  &mt NUMBER_0 P  &kp BSPC  &kp LEFT_CONTROL  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp RET  &mo 5  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &tog 6  &kp LALT  &kp LSHFT  &layer_sticky 3 LEFT_COMMAND  &mo 2  &kp SPACE  &mo 4
+&kp TAB  &mt NUMBER_1 Q  &mt NUMBER_2 W  &mt NUMBER_3 E  &mt NUMBER_4 R  &mt NUMBER_5 T  &mt NUMBER_6 Y  &mt NUMBER_7 U  &mt NUMBER_8 I  &mt NUMBER_9 O  &mt NUMBER_0 P  &kp BSPC  &kp LEFT_CONTROL  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp RET  &mo 5  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &tog 6  &kp LALT  &kp LSHFT  &cmd_layer LEFT_COMMAND 3  &mo 2  &kp SPACE  &mo 4
             >;
         };
 
         GALLIUM {
             bindings = <
-&trans  &kp B  &kp L  &kp D  &kp C  &kp V  &kp J  &kp Y  &kp O  &kp U  &kp SQT  &trans  &trans  &kp N  &kp R  &kp T  &kp S  &kp G  &kp P  &kp H  &kp A  &kp E  &kp I  &trans  &trans  &kp X  &kp Q  &kp M  &kp W  &kp Z  &kp K  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mt NUMBER_1 B  &mt NUMBER_2 L  &mt NUMBER_3 D  &mt NUMBER_4 C  &mt NUMBER_5 V  &mt NUMBER_6 J  &mt NUMBER_7 Y  &mt NUMBER_8 O  &mt NUMBER_9 U  &mt NUMBER_0 SINGLE_QUOTE  &trans  &trans  &kp N  &kp R  &kp T  &kp S  &kp G  &kp P  &kp H  &kp A  &kp E  &kp I  &trans  &trans  &kp X  &kp Q  &kp M  &kp W  &kp Z  &kp K  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         UTILITY {
             bindings = <
-&trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans  &kp ESC  &kp DEL  &trans  &trans  &trans  &trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans  &trans  &trans  &kp NUMBER_1  &kp N2  &kp NUMBER_3  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans  &trans  &kp NUMBER_0  &trans  &trans  &trans  &trans
+&trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans  &kp ESC  &kp DEL  &trans  &trans  &trans  &trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans  &trans  &trans  &kp NUMBER_1  &kp N2  &kp NUMBER_3  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans  &trans  &kp DOT  &kp NUMBER_0  &trans  &trans  &trans
             >;
         };
 
         COMMAND {
             bindings = <
-&kp LG(TAB)  &kp LG(Q)  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)  &trans  &trans  &trans  &trans  &trans  &kp LG(BACKSPACE)  &kp LG(GRAVE)  &kp LG(A)  &kp LG(S)  &kp LG(L)  &kp LG(F)  &trans  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &kp LG(ENTER)  &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(N)  &trans  &trans  &trans  &trans  &trans  &kp LS(LG(K))  &trans  &trans  &trans  &trans  &kp LG(SPACE)  &trans
+&trans  &kp LG(Q)  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)  &trans  &trans  &trans  &trans  &trans  &kp LG(BACKSPACE)  &kp LG(GRAVE)  &kp LG(A)  &kp LG(S)  &kp LG(L)  &kp LG(F)  &trans  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &kp LG(ENTER)  &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(N)  &trans  &trans  &trans  &trans  &trans  &kp LS(LG(K))  &trans  &trans  &trans  &trans  &kp LG(SPACE)  &trans
             >;
         };
 
