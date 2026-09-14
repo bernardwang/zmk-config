@@ -100,7 +100,7 @@
 
         COMMAND {
             bindings = <
-&trans  &kp LG(Q)  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)  &trans  &trans  &trans  &trans  &trans  &kp LG(BACKSPACE)  &kp LG(GRAVE)  &kp LG(A)  &kp LG(S)  &kp LG(L)  &kp LG(F)  &trans  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &kp LG(ENTER)  &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(N)  &trans  &kp LG(PLUS)  &kp LG(MINUS)  &trans  &trans  &kp LS(LG(K))  &trans  &trans  &trans  &trans  &kp LG(SPACE)  &trans
+&trans  &kp LG(Q)  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)  &trans  &kp LG(MINUS)  &kp LG(PLUS)  &kp LG(LS(NUMBER_4))  &kp LS(LG(NUMBER_5))  &kp LG(BACKSPACE)  &kp LG(GRAVE)  &kp LG(A)  &kp LG(S)  &kp LG(L)  &kp LG(F)  &trans  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &kp LG(ENTER)  &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(N)  &kp LA(LC(F))  &kp LA(LC(LEFT_ARROW))  &kp LA(LC(RIGHT_ARROW))  &trans  &trans  &kp LS(LG(K))  &trans  &trans  &trans  &trans  &kp LG(SPACE)  &trans
             >;
         };
 
