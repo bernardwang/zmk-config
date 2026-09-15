@@ -94,7 +94,7 @@
 
         NUM_NAV {
             bindings = <
-&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &mkp LCLK  &msc SCRL_DOWN  &msc SCRL_UP  &mkp RCLK  &trans  &kp DELETE  &trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp ESC  &trans  &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans  &trans  &kp NUMBER_0  &kp DOT  &trans  &trans  &trans
+&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &mkp LCLK  &msc SCRL_DOWN  &msc SCRL_UP  &mkp RCLK  &kp DEL  &trans  &trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp ESC  &trans  &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans  &kp COLON  &kp NUMBER_0  &kp DOT  &trans  &trans  &trans
             >;
         };
 
