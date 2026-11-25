@@ -58,6 +58,13 @@
             bindings = <&none &kp G &kp I &kp T &kp SPACE &kp R &kp E &kp S &kp E &kp T &kp SPACE &kp MINUS &kp MINUS &kp H &kp A &kp R &kp D &kp SPACE &kp O &kp R &kp I &kp G &kp I &kp N &kp FSLH &kp M &kp A &kp S &kp T &kp E &kp R>;
             label = "GIT_RESET";
         };
+
+        select_line: select_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT_ARROW) &kp LS(LG(RIGHT_ARROW))>;
+            label = "SELECT_LINE";
+        };
     };
 
     behaviors {
@@ -94,13 +101,13 @@
 
         NUM_NAV {
             bindings = <
-&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &mkp LCLK  &msc SCRL_UP  &msc SCRL_DOWN  &mkp RCLK  &kp DEL  &trans  &trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp ESC  &trans  &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans  &kp COLON  &kp NUMBER_0  &kp DOT  &trans  &trans  &trans
+&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans  &kp DELETE  &trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp ESC  &trans  &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp LCLK  &mkp RCLK  &kp COLON  &kp NUMBER_0  &kp DOT  &trans  &trans  &trans
             >;
         };
 
         CMD {
             bindings = <
-&trans  &kp LG(Q)  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)  &kp LA(LG(I))  &kp LG(MINUS)  &kp LG(PLUS)  &kp LG(LS(NUMBER_4))  &kp LS(LG(NUMBER_5))  &kp LG(BACKSPACE)  &kp LG(GRAVE)  &kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(L)  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &kp LG(ENTER)  &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(N)  &trans  &kp LC(LA(LEFT_ARROW))  &kp LC(LA(RIGHT_ARROW))  &kp LC(LA(F))  &trans  &kp LS(LG(K))  &trans  &trans  &trans  &trans  &kp LG(SPACE)  &trans
+&kp LG(GRAVE)  &kp LG(Q)  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)  &trans  &kp LG(MINUS)  &kp LG(PLUS)  &kp LG(NUMBER_0)  &trans  &kp LS(LG(K))  &kp LG(RS(NUMBER_4))  &kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(L)  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &kp LG(ENTER)  &kp LG(LS(NUMBER_5))  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(N)  &trans  &kp LC(LA(LEFT_ARROW))  &kp LC(LA(RIGHT_ARROW))  &kp LC(LA(F))  &trans  &select_line  &kp LG(F5)  &kp LA(LG(I))  &trans  &kp LC(LG(SPACE))  &kp LG(SPACE)  &kp LG(COMMA)
             >;
         };
 
