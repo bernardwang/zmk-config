@@ -107,13 +107,13 @@
 
         CMD {
             bindings = <
-&kp LG(GRAVE)  &kp LG(Q)  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)  &trans  &kp LG(MINUS)  &kp LG(PLUS)  &kp LG(NUMBER_0)  &trans  &kp LS(LG(K))  &kp LG(RS(NUMBER_4))  &kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(L)  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &kp LG(ENTER)  &kp LG(LS(NUMBER_5))  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(N)  &trans  &kp LC(LA(LEFT_ARROW))  &kp LC(LA(RIGHT_ARROW))  &kp LC(LA(F))  &trans  &select_line  &kp LG(F5)  &kp LA(LG(I))  &trans  &kp LC(LG(SPACE))  &kp LG(SPACE)  &kp LG(COMMA)
+&kp LG(GRAVE)  &kp LG(Q)  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)  &kp LG(LS(NUMBER_5))  &kp LG(MINUS)  &kp LG(PLUS)  &kp LG(NUMBER_0)  &trans  &kp LS(LG(K))  &trans  &kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(L)  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &kp LG(ENTER)  &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(N)  &trans  &kp LC(LA(LEFT_ARROW))  &kp LC(LA(RIGHT_ARROW))  &kp LC(LA(F))  &trans  &select_line  &kp LG(F5)  &kp LA(LG(I))  &trans  &kp LC(LG(SPACE))  &kp LG(SPACE)  &kp LG(COMMA)
             >;
         };
 
         SYMBOL {
             bindings = <
-&trans  &kp LS(GRAVE)  &kp LBKT  &kp RBKT  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(LBKT)  &kp LS(RBKT)  &kp LS(SQT)  &trans  &trans  &kp LS(N8)  &kp KP_MINUS  &kp LS(EQUAL)  &kp KP_EQUAL  &kp GRAVE  &kp LS(N2)  &kp LS(SEMI)  &kp LS(N9)  &kp LS(N0)  &kp LS(N1)  &back_directory  &trans  &kp LS(BSLH)  &kp BSLH  &kp LS(N3)  &kp LS(MINUS)  &trans  &trans  &kp SEMI  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(FSLH)  &trans  &git_reset  &git_commit  &git_amend  &trans  &trans  &trans
+&trans  &kp EXCLAMATION  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp AMPS  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans  &kp UNDERSCORE  &kp MINUS  &kp PLUS  &kp EQUAL  &kp BACKSLASH  &kp PIPE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &back_directory  &trans  &kp TILDE  &kp GRAVE  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LA(LS(MINUS))  &kp SEMI  &kp COLON  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(FSLH)  &trans  &git_reset  &git_commit  &git_amend  &trans  &trans  &trans
             >;
         };
 
