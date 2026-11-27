@@ -87,21 +87,27 @@
     keymap {
         compatible = "zmk,keymap";
 
-        QWERTY {
+        BASE {
             bindings = <
-&kp TAB  &mt NUMBER_1 Q  &mt NUMBER_2 W  &mt NUMBER_3 E  &mt NUMBER_4 R  &mt NUMBER_5 T  &mt NUMBER_6 Y  &mt NUMBER_7 U  &mt NUMBER_8 I  &mt NUMBER_9 O  &mt NUMBER_0 P  &kp BSPC  &kp LEFT_CONTROL  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp RET  &mo 5  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mo 6  &kp LALT  &kp LSHFT  &cmd_layer LEFT_COMMAND 3  &mo 2  &kp SPACE  &mo 4
+&kp TAB  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp BACKSPACE  &kp LEFT_CONTROL  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp ENTER  &mo 6  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mo 7  &kp LEFT_ALT  &kp LEFT_SHIFT  &cmd_layer LEFT_GUI 4  &mo 3  &kp SPACE  &mo 5
             >;
         };
 
         GALLIUM {
             bindings = <
-&trans  &mt NUMBER_1 B  &mt NUMBER_2 L  &mt NUMBER_3 D  &mt NUMBER_4 C  &mt NUMBER_5 V  &mt NUMBER_6 J  &mt NUMBER_7 Y  &mt NUMBER_8 O  &mt NUMBER_9 U  &mt NUMBER_0 SINGLE_QUOTE  &trans  &trans  &kp N  &kp R  &kp T  &kp S  &kp G  &kp P  &kp H  &kp A  &kp E  &kp I  &trans  &trans  &kp X  &kp Q  &kp M  &kp W  &kp Z  &kp K  &kp F  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mt NUMBER_1 B  &mt NUMBER_2 L  &mt NUMBER_3 D  &mt NUMBER_4 C  &mt NUMBER_5 V  &mt NUMBER_6 J  &mt NUMBER_7 Y  &mt NUMBER_8 O  &mt NUMBER_9 U  &mt NUMBER_0 SINGLE_QUOTE  &trans  &trans  &kp N  &kp R  &kp T  &kp S  &kp G  &kp P  &kp H  &kp A  &kp E  &kp I  &trans  &trans  &kp X  &kp Q  &kp M  &kp W  &kp Z  &kp K  &kp F  &kp COMMA  &kp PERIOD  &kp SLASH  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        QWERTY {
+            bindings = <
+&trans  &mt NUMBER_1 Q  &mt NUMBER_2 W  &mt NUMBER_3 E  &mt NUMBER_4 R  &mt NUMBER_5 T  &mt NUMBER_6 Y  &mt NUMBER_7 U  &mt NUMBER_8 I  &mt NUMBER_9 O  &mt NUMBER_0 P  &trans  &trans  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &trans  &trans  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         NUM_NAV {
             bindings = <
-&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans  &kp DELETE  &trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp ESC  &trans  &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp LCLK  &mkp RCLK  &kp COLON  &kp NUMBER_0  &kp DOT  &trans  &trans  &trans
+&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp DELETE  &trans  &trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp ESC  &trans  &trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp LCLK  &mkp RCLK  &kp COLON  &kp NUMBER_0  &kp DOT  &trans  &trans  &trans
             >;
         };
 
@@ -125,7 +131,7 @@
 
         SYSTEM {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &bootloader  &trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &trans  &sys_reset  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_SPD  &tog 1  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &bootloader  &trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &trans  &sys_reset  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_SPD  &tog 2  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
