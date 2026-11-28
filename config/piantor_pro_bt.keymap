@@ -57,18 +57,23 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_COMMAND &mo 1>,
+                <&kp LEFT_COMMAND &mo 9>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LEFT_COMMAND &mo 1>;
+                <&kp LEFT_COMMAND &mo 9>;
 
             label = "CMD_HOLD";
         };
 
-        cmd_tap: cmd_tap {
+        shift_hold: cmd_tap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&sl 3>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &mo 8>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &mo 8>;
 
             label = "CMD_TAP";
         };
@@ -83,7 +88,7 @@
         cmd_layer: cmd_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "CMD_LAYER";
-            bindings = <&cmd_hold>, <&cmd_tap>;
+            bindings = <&cmd_hold>, <&sl>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
@@ -96,7 +101,7 @@
 
         GALLIUM {
             bindings = <
-&kp TAB  &mt NUMBER_1 B  &mt NUMBER_2 L  &mt NUMBER_3 D  &mt NUMBER_4 C  &mt NUMBER_5 V  &mt NUMBER_6 J  &mt NUMBER_7 Y  &mt NUMBER_8 O  &mt NUMBER_9 U  &mt NUMBER_0 SINGLE_QUOTE  &kp BACKSPACE  &kp LEFT_CONTROL  &kp N  &kp R  &kp T  &kp S  &kp G  &kp P  &kp H  &kp A  &kp E  &kp I  &kp RET  &mo 5  &kp X  &kp Q  &kp M  &kp W  &kp Z  &kp K  &kp F  &kp COMMA  &kp PERIOD  &kp SLASH  &mo 6  &kp LEFT_ALT  &kp LEFT_SHIFT  &cmd_layer 0 0  &mo 2  &kp SPACE  &mo 4
+&kp TAB  &mt NUMBER_1 B  &mt NUMBER_2 L  &mt NUMBER_3 D  &mt NUMBER_4 C  &mt NUMBER_5 V  &mt NUMBER_6 J  &mt NUMBER_7 Y  &mt NUMBER_8 O  &mt NUMBER_9 U  &mt NUMBER_0 SINGLE_QUOTE  &kp BACKSPACE  &kp LEFT_CONTROL  &kp N  &kp R  &kp T  &kp S  &kp G  &kp P  &kp H  &kp A  &kp E  &kp I  &kp RET  &mo 6  &kp X  &kp Q  &kp M  &kp W  &kp Z  &kp K  &kp F  &kp COMMA  &kp PERIOD  &kp SLASH  &mo 7  &kp LEFT_ALT  &shift_hold  &cmd_layer 0 3  &mo 2  &kp SPACE  &mo 5
             >;
         };
 
@@ -114,7 +119,13 @@
 
         CMD {
             bindings = <
-&kp LG(GRAVE)  &kp LG(Q)  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)  &trans  &kp LG(MINUS)  &kp LG(PLUS)  &kp LG(NUMBER_0)  &kp LS(LG(NUMBER_3))  &kp LS(LG(K))  &trans  &kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(L)  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &kp LS(LG(NUMBER_4))  &kp LG(ENTER)  &kp LA(LG(I))  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(N)  &trans  &kp LC(LA(LEFT_ARROW))  &kp LC(LA(RIGHT_ARROW))  &kp LC(LA(F))  &kp LG(LS(NUMBER_5))  &select_line  &trans  &trans  &trans  &kp LC(LG(SPACE))  &kp LG(SPACE)  &kp LG(F5)
+&kp LG(GRAVE)  &kp LG(Q)  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)  &trans  &kp LG(MINUS)  &kp LG(PLUS)  &kp LG(NUMBER_0)  &kp LS(LG(NUMBER_3))  &kp LS(LG(K))  &trans  &kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(L)  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &kp LS(LG(NUMBER_4))  &kp LG(ENTER)  &kp LA(LG(I))  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(P)  &trans  &kp LC(LA(LEFT_ARROW))  &kp LC(LA(RIGHT_ARROW))  &kp LC(LA(F))  &kp LG(LS(NUMBER_5))  &select_line  &trans  &trans  &trans  &kp LC(LG(SPACE))  &kp LG(SPACE)  &kp LG(F5)
+            >;
+        };
+
+        CMD_SHIFT {
+            bindings = <
+&trans  &trans  &kp LG(LS(W))  &kp LG(LS(N))  &kp LG(LS(R))  &kp LG(LS(T))  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LS(Z))  &kp LG(LS(X))  &kp LG(LS(C))  &kp LG(LS(V))  &kp LG(LS(P))  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -135,7 +146,26 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &bootloader  &trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &trans  &sys_reset  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_SPD  &tog 1  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
+
+        SHIFT_HOLD {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        CMD_HOLD {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        CMD_SHIFT {
+            if-layers = <8 9>;
+            then-layer = <4>;
+        };
+    };
 };
